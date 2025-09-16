@@ -128,7 +128,6 @@
     >   related to the common development and the primary use by the
     >   automotive and aerospace industries of the AP242 standard.
 
-
 #### STEP Viewers
 
 -   Website: https://www.mbx-if.org/home/mbx/resources/
@@ -283,6 +282,8 @@
     >   easyEXPRESS is a Visual Studio Code extension that aims at providing
     >   advanced editing capabilities to EXPRESS developers and help them
     >   efficiently write valid EXPRESS information models.
+-   NIST Releases easyEXPRESS: https://www.nist.gov/news-events/news/2023/12/nist-releases-easyexpress-its-first-official-visual-studio-code-extension
+    >   Released December 6, 2023, Updated February 4, 2025
 
 #### NEST STEP to X3D Translator
 
@@ -299,7 +300,42 @@
     >   based on the Open CASCADE STEP Processor and written in C++.
     -   Release: https://github.com/usnistgov/STP2X3D/releases/tag/v1.50
 
+#### STEP Software
+
+-   STEP Software: https://www.nist.gov/ctl/smart-connected-systems-division/smart-connected-manufacturing-systems-group/step-nist/step-1
+    -   STEP File Analyzer and Viewer - The STEP File Viewer supports parts and
+        assemblies, dimensions and tolerances, supplemental geometry, datum
+        targets, and point clouds. The Analyzer generates a spreadsheet of all
+        entity and attribute information; reports and analyzes any semantic PMI,
+        graphical PMI, and validation properties for conformance to recommended
+        practices; and checks for basic STEP file format errors.
+    -   STEP to X3D Translator - open-source software that translates a STEP
+        (ISO 10303) Part 21 file (.stp or .step) to an X3D (ISO/IEC 19776)
+    -   easyEXPRESS - a tool to help EXPRESS-based standard developers
+    -   STEP to OWL Translator (STP2OWL) is an open-source software, and an
+        improved implementation of OntoSTEP.  STP2OWL translates STEP schemas
+        (EXPRESS) and instance files (Part 21) into Web Ontology Language (OWL)
+        files in a faster and more flexible way, thus furthering the adoption of
+        the full capabilities of ISO 10303.
+    -   OntoSTEP - adds value to STEP using Semantic Technologies by translating
+        the APs defined in the EXPRESS language (ISO 10303-11), and the actual
+        instance files represented using the ISO 10303-21 (Part 21) format.
+    -   STEP Class Library (SCL) - a set of C++ class libraries that can represent
+        information conforming to the EXPRESS (ISO 10303-11) data specification.
+
 ---
+
+#### OntoSTEP Plugin
+
+-   OntoSTEP Plugin: https://www.nist.gov/services-resources/software/ontostep-plugin
+    >   OntoSTEP is implemented as a plugin for the Protégé 4 OWL Editor. This
+    >   plugin allows EXPRESS schemas and Part21 files to be imported as TBox
+    >   (classes) and ABox (individuals) represented in OWL.
+    -   Download: https://sourceforge.net/projects/osexpress/files/ontostep/
+        >   Latest release: 2011-11-09
+    -   OntoSTEP: OWL-DL Ontology for STEP: https://www.nist.gov/publications/ontostep-owl-dl-ontology-step
+        >   Published May 4, 2009
+
 
 ## Download sources
 
@@ -321,15 +357,22 @@
 	-   ISO_CD TS 10303-15 ed.2 - id.86075 Approval XSD_example_output.xsd
 -   Approval XSD_example_output: https://standards.iso.org/iso/ts/10303/-15/ed-2/en/ISO_CD%20TS%2010303-15%20ed.2%20-%20id.86075%20Approval%20XSD_example_output.xsd
 
+## Publications
+
+### STEP Research and Publications
+
+-   STEP Research and Publications: https://www.nist.gov/ctl/smart-connected-systems-division/smart-connected-manufacturing-systems-group/step-nist/step
+    -   [On Migrating ISO 10303 PMI Models to a Common Core](https://www.nist.gov/publications/migrating-iso-10303-pmi-models-common-core)
+        >   Published January 4, 2023
+        >
+        >   The aerospace and automotive industries created a joint project to
+        >   merge ISO 10303-203: Configuration controlled 3D design (AP 203)
+        >   and ISO 10303-214: Core data for automotive mechanical design
+        >   processes (AP 214) into a new ISO 10303-242: Managed model-based
+        >   3D engineering (AP 242) rather than pursue individual updates.
 
 
 ## Other links
-
--   http://cvs.boost-lab.net/sphinx/STEPlib_User_Guide/html/pages/howto/howtoReferenceData.html
--   http://cvs.boost-lab.net/sphinx/STEPlib_User_Guide/html/pages/howto/howtoScriptOWL.html
--   https://www.nist.gov/publications/process-specification-language-psl-overview-and-version-10-specification
--   https://www.nist.gov/pml/special-publication-330
--   https://www.nist.gov/ctl/smart-connected-systems-division/smart-connected-manufacturing-systems-group/step-nist/step-1
 
 ### Library of Congress Collections
 
