@@ -197,6 +197,7 @@
         -   General STEP Conformance Checker: https://www.steptools.com/docs/devtools/apconform.html
         -   STEP Part 21 File Browser: https://www.steptools.com/docs/devtools/stepbrws.html
         -   STEP Part 28 XML Browser: https://www.steptools.com/docs/devtools/p28view.html
+    -   Reading and Writing Data Sets: https://www.steptools.com/docs/roselib/read_write.html
 -   Integrated generic resource: Geometric and topological representation:
     https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm
 -   ISO 10303-21: https://www.steptools.com/stds/step/IS_final_p21e3.html
@@ -325,6 +326,13 @@
 
 ---
 
+#### STEP Tools Software
+
+-   STEP Tools Software: https://steptools.github.io/
+-
+
+---
+
 #### OntoSTEP Plugin
 
 -   OntoSTEP Plugin: https://www.nist.gov/services-resources/software/ontostep-plugin
@@ -336,6 +344,22 @@
     -   OntoSTEP: OWL-DL Ontology for STEP: https://www.nist.gov/publications/ontostep-owl-dl-ontology-step
         >   Published May 4, 2009
 
+---
+
+#### Convert STEP to AP242 Business Object Model XML
+
+-   stp2bom: https://github.com/steptools/stp2bom
+    >   To run in visual studio you may need to install the boost library
+    >   manually. You will also be required to have ST-Developer Installed.
+
+---
+
+#### Xbim toolkit
+
+-   Converting STEP physical file to XML and vice versa:
+    https://docs.xbim.net/examples/step-to-xml-and-back-again.html
+
+---
 
 ## Download sources
 
@@ -343,19 +367,22 @@
     >   Only informative sections of standards are publicly available. To view
     >   the full content, you will need to purchase the standard.
 
+
 ### ISO Standards Maintenance Portal
 
 -   STEP Parts List: https://standards.iso.org/iso/10303/STEP_Parts_List.htm
 -   home iso 10303 smrl v11 tech: https://standards.iso.org/iso/10303/smrl/v11/tech/
     -    [smrlv11.zip](https://standards.iso.org/iso/10303/smrl/v11/tech/smrlv11.zip)
-
-#### ISO 10303-15
-
 -   home > iso > ts 10303 > -15 > ed-2 > en: https://standards.iso.org/iso/ts/10303/-15/ed-2/en/
  	-   ISO_CD TS 10303-15 ed.2 - id.86075 Approval Canonical_xmi_example_input.xmi
 	-   ISO_CD TS 10303-15 ed.2 - id.86075 Approval Schematron_example_output.sch
 	-   ISO_CD TS 10303-15 ed.2 - id.86075 Approval XSD_example_output.xsd
 -   Approval XSD_example_output: https://standards.iso.org/iso/ts/10303/-15/ed-2/en/ISO_CD%20TS%2010303-15%20ed.2%20-%20id.86075%20Approval%20XSD_example_output.xsd
+-   https://standards.iso.org/iso/ts/10303/-18/ed-1/en/ISO_TC184_SC04_WG11_N326_Canonical_xmi_example_input.xmi
+-   https://standards.iso.org/iso/ts/10303/-18/ed-1/en/ISO_TC184_SC04_WG11_N327_OpenAPI_example_output.json
+-   https://standards.iso.org/iso/ts/10303/-4443/ed-1/tech/openapi-schema/domain_model/DomainModel.json
+-   https://standards.iso.org/iso/10303/TC_184_Big_Picture/Big%20Picture%20Tool%20Kit.zip
+
 
 ## Publications
 
@@ -371,6 +398,12 @@
         >   processes (AP 214) into a new ISO 10303-242: Managed model-based
         >   3D engineering (AP 242) rather than pursue individual updates.
 
+### Discussions
+
+-   STEP to XML: https://groups.google.com/g/scl-dev/c/nrs0Xy5_D9I
+    >   I'm working on a university project, where i'm supposed to convert
+    >   STEP files into XML files. Any ideas which part of stepCode to use for
+    >   this purpose?
 
 ## Other links
 
