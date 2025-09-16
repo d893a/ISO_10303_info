@@ -3,40 +3,38 @@
 ## Overview
 
 -   Wikipedia: https://en.wikipedia.org/wiki/ISO_10303
-    >   ISO 10303 (Automation systems and integration — Product data
-    >   representation and exchange) is a family of ISO standards for
-    >   computer-interpretable representation (description) and exchange of
-    >   product manufacturing information (PMI). It aims to provide
-    >   interoperability between various computer-aided design (CAD) software,
-    >   assist with automation in computer-aided manufacturing (CAM), and
-    >   allows long-term archival of 3D, CAD and PDM data. It is known
-    >   informally as "STEP", which stands for "Standard for the Exchange of
-    >   Product model data". Due to a large scope ISO 10303 is subdivided into
-    >   approximately 700 underlying standards total.
+    -   ISO 10303 (Automation systems and integration — Product data
+        representation and exchange) is a family of ISO standards for
+        computer-interpretable representation (description) and exchange of
+        product manufacturing information (PMI). It aims to provide
+        interoperability between various computer-aided design (CAD) software,
+        assist with automation in computer-aided manufacturing (CAM), and
+        allows long-term archival of 3D, CAD and PDM data. It is known
+        informally as "STEP", which stands for "Standard for the Exchange of
+        Product model data". Due to a large scope ISO 10303 is subdivided into
+        approximately 700 underlying standards total.
 
--   STEP is developed and maintained by the ISO technical committee TC 184,
-    Automation systems and integration. Like other ISO and IEC standards, STEP
-    is copyright by ISO and is not freely available. However, the 10303
-    EXPRESS schemas are freely available, as are the recommended practices for
-    implementers.
+-   Like other ISO and IEC standards, STEP is copyright by ISO and is not
+    freely available. However, the 10303 EXPRESS schemas are freely available,
+    as are the recommended practices for implementers.
 
 -   Relevant ISO 10303 parts: https://en.wikipedia.org/wiki/List_of_STEP_(ISO_10303)_parts
     -   Part 1 Overview and fundamental principles
     -   Part 2 Vocabulary
     -   Parts 11 to 19 : Description methods: EXPRESS, EXPRESS-X
-        -   Part 11 - EXPRESS language reference manual
+        -   **Part 11 - EXPRESS language reference manual**
         -   Part 12 - EXPRESS -I language reference manual (withdrawn)
         -   Part 14 - EXPRESS -X language reference manual
         -   Part 15 - SysML XMI to XSD transformation
     -   Parts 21 to 29 : Implementation methods: STEP-File, STEP-XML, SDAI, C/C++/Java language bindings interfaces,
-        -   Part 21 - STEP-File Clear text encoding of the exchange structure
+        -   **Part 21 - STEP-File Clear text encoding of the exchange structure**
         -   Part 22 - SDAI Standard data access interface specification
         -   Part 23 - C++ language binding of the standard data access interface
         -   Part 24 - C language binding of the standard data access interface
         -   Part 25 - EXPRESS to OMG XMI binding
         -   Part 26 - Binary representation of EXPRESS-driven data using HDF5
         -   Part 27 - Java TM programming language binding to the standard data access interface with Internet/Intranet extensions
-        -   Part 28 - STEP-XML XML representation for EXPRESS-driven data
+        -   **Part 28 - STEP-XML XML representation for EXPRESS-driven data**
     -   Parts 201 to 299 : Application protocols (AP)
         -   **Part 210 - Electronic assembly, interconnect and packaging design. The most complex and sophisticated STEP AP.**
         -   Part 212 - Electrotechnical design and installation. Designed as a complement for AP214, but not fully harmonized with it.
@@ -77,6 +75,13 @@
     -   Wikipedia: https://en.wikipedia.org/wiki/EXPRESS_(data_modeling_language)
     -   EXPRESS Language Foundation: https://www.expresslang.org/
         -   EXPRESS grammar in BNF form: https://www.expresslang.org/references/
+            -   ISO 10303-11:2004 BNF (raw)
+            -   ISO 10303-11:2004 BNF
+            -   ISO 10303-14 BNF (raw)
+            -   ISO 10303-14 BNF
+            -   ISO 10303-21:1994 BNF
+            -   ISO 10303-21:2002 BNF
+            -   ISO 10303 patch schema BNF
 
 -   ISO 10303-21 STEP file: https://en.wikipedia.org/wiki/ISO_10303-21
     > STEP-file is a widely used data exchange form of STEP. ISO 10303 can
@@ -203,6 +208,33 @@
 -   Doc: https://stepcode.github.io/
     -   exp2python: generates Python code. Formerly fedex_python.
         https://stepcode.github.io/docs/executables/#exp2python
+
+
+#### Fougue Mayo
+
+-   GitHUb: https://github.com/fougue/mayo
+    >   Open source 3D CAD viewer and converter
+    -   Supported formats: https://github.com/fougue/mayo/wiki/Supported-formats
+        | Format      | Import | Export | Notes                                                                                   |
+        |-------------|:------:|:------:|----------------------------------------------------------------------------------------|
+        | STEP        |   ✔    |   ✔    | AP203, 214, 242 (some parts)                                                           |
+        | IGES        |   ✔    |   ✔    | v5.3                                                                                   |
+        | BREP        |   ✔    |   ✔    | OpenCascade native format                                                              |
+        | DXF         |   ✔    |   ❌    |                                                                                        |
+        | OBJ         |   ✔    |   ✔    | Import: OpenCascade ≥ v7.4.0<br>Export: OpenCascade ≥ v7.6.0                           |
+        | glTF        |   ✔    |   ✔    | Supports 1.0, 2.0, GLB<br>Import: OpenCascade ≥ v7.4.0<br>Export: OpenCascade ≥ v7.5.0 |
+        | VRML        |   ✔    |   ✔    | v2.0 UTF8<br>Import: OpenCascade ≥ v7.7.0                                              |
+        | STL         |   ✔    |   ✔    | ASCII/binary                                                                           |
+        | PLY         |   ✔    |   ✔    | ASCII/binary (little and big endian)<br>Colors and point clouds supported               |
+        | OFF         |   ✔    |   ✔    | Vertex colors supported                                                                |
+        | AMF         |   ✔    |   ✔    | Import: Assimp library<br>Export: gmio ≥ v0.4.0<br>Export format: v1.2 Text/ZIP        |
+        | 3MF         |   ✔    |   ❌    | Requires Assimp library                                                                |
+        | 3DS         |   ✔    |   ❌    | Requires Assimp library                                                                |
+        | FBX         |   ✔    |   ❌    | Animations not supported<br>Requires Assimp library                                    |
+        | Collada     |   ✔    |   ❌    | Requires Assimp library                                                                |
+        | X3D         |   ✔    |   ❌    | Requires Assimp library                                                                |
+        | X (DirectX) |   ✔    |   ❌    | Animations not supported<br>Requires Assimp library                                    |
+        | Image       |   ❌    |   ✔    | PNG, JPEG, BMP, GIF, ...                                                               |
 
 ---
 
