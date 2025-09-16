@@ -44,7 +44,7 @@
         -   Part 232 - Technical data packaging core information and exchange
         -   Part 233 - Systems engineering
         -   **Part 239 - Product life cycle support**
-        -   **Part 242 - Managed model-based 3D engineering**
+        -   **Part 242 - Managed model-based 3D engineering**: https://www.iso.org/standard/84300.html
     -   Part 400 : Reference schema for SysML mapping
     -   Parts 401 to 499 : Application protocol modules (Implementation modules for APs)
     -   Part 4000 : Core model
@@ -104,11 +104,16 @@
         -   As a result, most CAD software have some sort of "repair geometry data
             after import" feature, which may or may not work.
 
+### ISO 10303-28 STEP-XML
+
 -   ISO 10303-28 STEP-XML: https://en.wikipedia.org/wiki/ISO_10303-28
     >   STEP-XML specifies the use of the Extensible Markup Language (XML)
     >   to represent EXPRESS schema (ISO 10303-11) and the data that is
     >   governed by those EXPRESS schema. It is an alternative method to
     >   STEP-File for the exchange of data according to ISO 10303.
+
+-   STEP/EXPRESS and XML: https://xml.coverpages.org/stepExpressXML.html
+    >   Last modified: March 29, 2002
 
 ---
 
@@ -195,6 +200,8 @@
         -   STEP Part 28 XML Browser: https://www.steptools.com/docs/devtools/p28view.html
 -   Integrated generic resource: Geometric and topological representation:
     https://www.steptools.com/stds/smrl/data/resource_docs/geometric_and_topological_representation/sys/6_schema.htm
+-   ISO 10303-21: https://www.steptools.com/stds/step/IS_final_p21e3.html
+    >   Part 21: Implementation methods: Clear text encoding of the exchange structure
 
 ---
 
@@ -210,52 +217,132 @@
         https://stepcode.github.io/docs/executables/#exp2python
 
 
+#### NIST STEP to OWL Translator
+
+-   STP2OWL: https://github.com/usnistgov/stp2owl
+    >   The NIST STEP to OWL Translator (STP2OWL) is an open-source software,
+    >   and an improved implementation of OntoSTEP. STP2OWL translates STEP
+    >   schemas (EXPRESS) and instance files (P21) into Web Ontology Language
+    >   (OWL) files in a faster and more flexible way, thus furthering the
+    >   adoption of the full capabilities of ISO 10303. Developed at the
+    >   National Institute of Standards and Technology (NIST), the software is
+    >   based on the STEPcode and written in C++.
+    -   A windows executable and required DLLs to run the software:
+        https://github.com/usnistgov/STP2OWL/releases/tag/v1.0
+
 #### Fougue Mayo
 
 -   GitHUb: https://github.com/fougue/mayo
     >   Open source 3D CAD viewer and converter
     -   Supported formats: https://github.com/fougue/mayo/wiki/Supported-formats
         | Format      | Import | Export | Notes                                                                                   |
-        |-------------|:------:|:------:|----------------------------------------------------------------------------------------|
+        |-------------|:------:|:------:|-----------------------------------------------------------------------------------------|
         | STEP        |   ✔    |   ✔    | AP203, 214, 242 (some parts)                                                           |
         | IGES        |   ✔    |   ✔    | v5.3                                                                                   |
         | BREP        |   ✔    |   ✔    | OpenCascade native format                                                              |
-        | DXF         |   ✔    |   ❌    |                                                                                        |
+        | DXF         |   ✔    |   ❌   |                                                                                        |
         | OBJ         |   ✔    |   ✔    | Import: OpenCascade ≥ v7.4.0<br>Export: OpenCascade ≥ v7.6.0                           |
         | glTF        |   ✔    |   ✔    | Supports 1.0, 2.0, GLB<br>Import: OpenCascade ≥ v7.4.0<br>Export: OpenCascade ≥ v7.5.0 |
         | VRML        |   ✔    |   ✔    | v2.0 UTF8<br>Import: OpenCascade ≥ v7.7.0                                              |
         | STL         |   ✔    |   ✔    | ASCII/binary                                                                           |
-        | PLY         |   ✔    |   ✔    | ASCII/binary (little and big endian)<br>Colors and point clouds supported               |
+        | PLY         |   ✔    |   ✔    | ASCII/binary (little and big endian)<br>Colors and point clouds supported              |
         | OFF         |   ✔    |   ✔    | Vertex colors supported                                                                |
         | AMF         |   ✔    |   ✔    | Import: Assimp library<br>Export: gmio ≥ v0.4.0<br>Export format: v1.2 Text/ZIP        |
-        | 3MF         |   ✔    |   ❌    | Requires Assimp library                                                                |
-        | 3DS         |   ✔    |   ❌    | Requires Assimp library                                                                |
-        | FBX         |   ✔    |   ❌    | Animations not supported<br>Requires Assimp library                                    |
-        | Collada     |   ✔    |   ❌    | Requires Assimp library                                                                |
-        | X3D         |   ✔    |   ❌    | Requires Assimp library                                                                |
-        | X (DirectX) |   ✔    |   ❌    | Animations not supported<br>Requires Assimp library                                    |
-        | Image       |   ❌    |   ✔    | PNG, JPEG, BMP, GIF, ...                                                               |
+        | 3MF         |   ✔    |   ❌   | Requires Assimp library                                                                |
+        | 3DS         |   ✔    |   ❌   | Requires Assimp library                                                                |
+        | FBX         |   ✔    |   ❌   | Animations not supported<br>Requires Assimp library                                    |
+        | Collada     |   ✔    |   ❌   | Requires Assimp library                                                                |
+        | X3D         |   ✔    |   ❌   | Requires Assimp library                                                                |
+        | X (DirectX) |   ✔    |   ❌   | Animations not supported<br>Requires Assimp library                                    |
+        | Image       |   ❌   |   ✔    | PNG, JPEG, BMP, GIF, ...                                                               |
+
+
+#### Nara STEP File Browser
+
+-   nara-stepbrowser: https://github.com/fdesjardins/nara-stepbrowser
+    >   A simple file browser for navigating the relationships between ISO
+    >   10303 (STEP) files.
+
+
+#### IFC Parser
+
+-   IFC Parser: https://github.com/gsimon75/IFC_parser
+    >   A full python parser for ISO 10303-11 / EXPRESS schemas and IFC files
+
+#### NIST STEP File Analyzer and Viewer
+
+-   STEP File Analyzer and Viewer: https://www.nist.gov/services-resources/software/step-file-analyzer-and-viewer
+    >   Last Updated 09/10/2025
+    >
+    >   All commonly used STEP file formats, also known as Application Protocols (AP), are supported.
+    -   Download: https://www.nist.gov/system/files/documents/noindex/2025/09/10/SFA-5.33.zip
+
+#### NIST easyEXPRESS
+
+-   easyEXPRESS: https://marketplace.visualstudio.com/items?itemName=usnistgov.easyEXPRESS
+    >   easyEXPRESS is a Visual Studio Code extension that aims at providing
+    >   advanced editing capabilities to EXPRESS developers and help them
+    >   efficiently write valid EXPRESS information models.
+
+#### NEST STEP to X3D Translator
+
+-   STEP to X3D Translator: https://www.nist.gov/services-resources/software/step-x3d-translator
+    >   The NIST STEP to X3D Translator (STP2X3D) is an open-source software
+    >   that translates a STEP (ISO 10303) Part 21 file (.stp or .step) to an
+    >   X3D (ISO/IEC 19776) file (.x3d) or X3DOM file (.html). X3DOM files can
+    >   be displayed in a web browser.
+-   GitHub: https://github.com/usnistgov/STP2X3D
+    >   The NIST STEP to X3D Translator is an open-source software that
+    >   translates a STEP (ISO 10303) Part 21 file (.stp or .step) to an X3D
+    >   (ISO/IEC 19776) file (.x3d) or X3DOM file (.html). Developed at the
+    >   National Institute of Standards and Technology (NIST), the software is
+    >   based on the Open CASCADE STEP Processor and written in C++.
+    -   Release: https://github.com/usnistgov/STP2X3D/releases/tag/v1.50
 
 ---
 
+## Download sources
+
+-   ISO Online Browsing Platform: https://www.iso.org/obp/ui/en/#iso:std:iso:10303:-1:ed-3:v1:en
+    >   Only informative sections of standards are publicly available. To view
+    >   the full content, you will need to purchase the standard.
+
+### ISO Standards Maintenance Portal
+
+-   STEP Parts List: https://standards.iso.org/iso/10303/STEP_Parts_List.htm
+-   home iso 10303 smrl v11 tech: https://standards.iso.org/iso/10303/smrl/v11/tech/
+    -    [smrlv11.zip](https://standards.iso.org/iso/10303/smrl/v11/tech/smrlv11.zip)
+
+#### ISO 10303-15
+
+-   home > iso > ts 10303 > -15 > ed-2 > en: https://standards.iso.org/iso/ts/10303/-15/ed-2/en/
+ 	-   ISO_CD TS 10303-15 ed.2 - id.86075 Approval Canonical_xmi_example_input.xmi
+	-   ISO_CD TS 10303-15 ed.2 - id.86075 Approval Schematron_example_output.sch
+	-   ISO_CD TS 10303-15 ed.2 - id.86075 Approval XSD_example_output.xsd
+-   Approval XSD_example_output: https://standards.iso.org/iso/ts/10303/-15/ed-2/en/ISO_CD%20TS%2010303-15%20ed.2%20-%20id.86075%20Approval%20XSD_example_output.xsd
+
+
+
 ## Other links
 
--   https://www.iso.org/obp/ui/en/#iso:std:iso:ts:15926:-4:ed-3:v1:en
--   https://www.iso.org/obp/ui/en/#iso:std:iso:10303:-1:ed-3:v1:en
--   https://standards.iso.org/iso/ts/10303/-15/ed-2/en/
--   https://standards.iso.org/iso/10303/smrl/v11/tech/
--   https://standards.iso.org/iso/10303/STEP_Parts_List.htm
--   https://standards.iso.org/iso/ts/10303/-15/ed-2/en/ISO_CD%20TS%2010303-15%20ed.2%20-%20id.86075%20Approval%20XSD_example_output.xsd
 -   http://cvs.boost-lab.net/sphinx/STEPlib_User_Guide/html/pages/howto/howtoReferenceData.html
--   https://github.com/usnistgov/stp2owl
 -   http://cvs.boost-lab.net/sphinx/STEPlib_User_Guide/html/pages/howto/howtoScriptOWL.html
--   https://www.loc.gov/preservation/digital/formats/fdd/fdd000448.shtml
 -   https://www.nist.gov/publications/process-specification-language-psl-overview-and-version-10-specification
--   https://www.nist.gov/services-resources/software/step-file-analyzer-and-viewer
 -   https://www.nist.gov/pml/special-publication-330
--   https://github.com/fdesjardins/nara-stepbrowser
--   https://github.com/gsimon75/IFC_parser
 -   https://www.nist.gov/ctl/smart-connected-systems-division/smart-connected-manufacturing-systems-group/step-nist/step-1
+
+### Library of Congress Collections
+
+-   STEP-file, ISO 10303-21: https://www.loc.gov/preservation/digital/formats/fdd/fdd000448.shtml
+    >   **Relationship between ISO 10303-21 and ISO 10303-11**: The EXPRESS data
+    >   modeling language (specified in ISO 10303-11) is used to define
+    >   schemas, and constraints on the entities in those schemas, to
+    >   represent the data model for the design and characteristics of a
+    >   "product." A product might be a single component or an entire building
+    >   structure. Given an EXPRESS model for a product, ISO 10303-21 defines
+    >   an encoding and file format (the plain text STEP-file) for an instance
+    >   conforming to that model. The instance is known as an "exchange
+    >   structure."
 
 ### SysML: Systems modeling language
 
@@ -266,3 +353,10 @@
     >   Exchange of Product model data) AP-233 standard for exchanging and
     >   sharing information between systems engineering software applications
     >   and tools.
+
+### ISO 15926
+
+-   ISO 15926-4: https://www.iso.org/obp/ui/en/#iso:std:iso:ts:15926:-4:ed-3:v1:en
+    >   ISO/TS 15926-4:2024(en) Industrial automation systems and integration
+    >   — Integration of life-cycle data for process plants including oil and
+    >   gas production facilities — Part 4: Core reference data
